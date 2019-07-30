@@ -1,0 +1,224 @@
+[
+  {
+    "flowId": "LOGIN",
+    "flowName": "Login",
+    "noOfStep": "1",
+    "mainUrl": "http://10.1.14.115/CITAD/Modules/Login/frmLogin.aspx",
+    "steps": [
+      {
+        "stepNo": "1",
+        "stepName": "Login",
+        "stepUrl": "https://app.accelus.com/",
+        "stepElements": [
+          {
+            "id": "txtUserID",
+            "value": "HOATBD",
+            "type": "textfield",
+            "findBy": "ID",
+            "action": "SENDTEXT",
+            "waitElement": "",
+            "order": "1"
+          },
+          {
+            "id": "txtPasswords",
+            "value": "123456",
+            "type": "textfield",
+            "findBy": "ID",
+            "action": "SENDTEXT",
+            "waitElement": "",
+            "order": "2"
+          },
+          {
+            "id": "btnLogin",
+            "value": "",
+            "type": "button",
+            "findBy": "ID",
+            "action": "CLICK",
+            "waitElement": "ctl00_mnuMainn1",
+            "order": "3"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "flowId": "EXCHANGE",
+    "flowName": "Giao dịch đi",
+    "noOfSteps": "2",
+    "mainUrl": "",
+    "steps": [
+      {
+        "stepNo": "1",
+        "stepName": "Giao dịch đi",
+        "stepUrl": "",
+        "waitElement": "",
+        "stepElements": [
+          {
+            "id": "//a[contains(text(), \"Giao dịch đi\")]",
+            "value": "",
+            "type": "MENU_ITEM",
+            "findBy": "XPATH",
+            "action": "HOVER",
+            "waitElement": "",
+            "order": "1"
+          }
+        ]
+      },
+      {
+          "stepNo": "2",
+          "stepName": "Tạo lệnh",
+          "stepUrl": "",
+          "waitElement": "",
+          "stepElements": [
+            {
+                "id": "//a[contains(text(), \"A. Tạo lệnh chuyển tiền\")]",
+                "value": "",
+                "type": "BUTTON",
+                "findBy": "XPATH",
+                "action": "CLICK_GETTEXT",
+                "waitElement": "ctl00_ContentPlaceHolder1_grvListTrx",
+                "order": "1"
+              }
+          ]
+        }
+    ]
+  },
+  {
+    "flowId": "SELECT",
+    "flowName": "Bảng giao dịch",
+    "noOfSteps": "3",
+    "mainUrl": "",
+    "steps": [
+      {
+        "stepNo": "1",
+        "stepName": "Số lượng giao dịch",
+        "stepUrl": "",
+        "stepElements": [
+          {
+            "id": "ctl00_ContentPlaceHolder1_lblCount",
+            "value": "",
+            "type": "MENU_ITEM",
+            "findBy": "ID",
+            "action": "GETTEXT",
+            "waitElement": "",
+            "order": "1"
+          }
+        ]
+      },
+      {
+        "stepNo": "2",
+        "stepName": "Chọn giao dịch",
+        "stepUrl": "",
+        "stepElements": [
+          {
+            "id": "ctl00_ContentPlaceHolder1_grvListTrx_ctl01_chkCheckAll",
+            "value": "",
+            "type": "BUTTON",
+            "findBy": "ID",
+            "action": "CLICK",
+            "waitElement": "",
+            "order": "1"
+          }
+        ]
+      },
+      {
+        "stepNo": "3",
+        "stepName": "Chi tiết giao dịch",
+        "stepUrl": "",
+        "stepElements": [
+          {
+            "id": "//a[contains(text(), \"Chi tiết\")]",
+            "value": "",
+            "type": "BUTTON",
+            "findBy": "XPATH",
+            "action": "CLICK_GETTEXT",
+            "waitElement": "",
+            "order": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "flowId": "DETAIL",
+    "flowName": "Kiểm tra giao dịch",
+    "noOfSteps": "1",
+    "mainUrl": "",
+    "steps": [
+      {
+        "stepNo": "1",
+        "stepName": "Số tiền chuyển",
+        "stepUrl": "",
+        "stepElements": [
+          {
+            "id": "ctl00_ContentPlaceHolder1_txtAmount",
+            "value": "",
+            "type": "textfield",
+            "findBy": "ID",
+            "action": "GETVALUE",
+            "waitElement": "",
+            "order": "1"
+          },
+          {
+              "id": "ctl00_ContentPlaceHolder1_txtStatus",
+              "value": "",
+              "type": "textfield",
+              "findBy": "ID",
+              "action": "GETVALUE",
+              "waitElement": "",
+              "order": "2"
+            },
+            {
+                "id": "ctl00_ContentPlaceHolder1_txtRelation_No",
+                "value": "",
+                "type": "textfield",
+                "findBy": "ID",
+                "action": "GETVALUE",
+                "waitElement": "",
+                "order": "3"
+              }
+        ]
+      }
+    ]
+  },
+  {
+    "flowId": "PERFORM",
+    "flowName": "Thực hiện giao dịch",
+    "noOfSteps": "2",
+    "mainUrl": "",
+    "steps": [
+      {
+        "stepNo": "1",
+        "stepName": "Ghi dữ liệu",
+        "stepUrl": "",
+        "stepElements": [
+          {
+            "id": "ctl00_ContentPlaceHolder1_btnSave",
+            "value": "",
+            "type": "BUTTON",
+            "findBy": "ID",
+            "action": "CLICK",
+            "waitElement": "",
+            "order": "1"
+          }
+        ]
+      },
+      {
+        "stepNo": "2",
+        "stepName": "Bản ghi tiếp theo",
+        "stepUrl": "",
+        "stepElements": [
+          {
+            "id": "ctl00_ContentPlaceHolder1_btnNext",
+            "value": "",
+            "type": "BUTTON",
+            "findBy": "ID",
+            "action": "CLICK",
+            "waitElement": "",
+            "order": "1"
+          }
+        ]
+      }
+    ]
+  }
+]
